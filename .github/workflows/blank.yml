@@ -24,7 +24,7 @@ jobs:
         run: |
           $Env:PATH = "C:\mingw64\bin;C:\ninja;$Env:PATH"
           cd C:\opencv-4.6.0
-          cmake -G Ninja -D CMAKE_INSTALL_PREFIX=C:/opencv -D INSTALL_C_EXAMPLES=ON -D BUILD_EXAMPLES=OFF -D BUILD_TESTS=OFF
+          cmake -G Ninja -D CMAKE_INSTALL_PREFIX=C:/opencv -D INSTALL_C_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF
           ninja
           ninja install
       - name: Package Library
